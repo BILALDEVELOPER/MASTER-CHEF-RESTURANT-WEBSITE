@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css"> <!-- Flatpickr CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />    <link rel="stylesheet" href="style.css">
+</head>
+<body style="background-color: #FFFDD0;">
+  <style>
+    .navbar {
+  background-color: rgba(255, 0, 0, 0.8); /* Semi-transparent red */
+  border-bottom: 2px solid #2C3E50; /* Deep Blue-Grey border for contrast */
+}
+
+.navbar .nav-link {
+  color: #F0F0F0; /* Off-white text for softer contrast */
+  margin-left: 3px !important;
+}
+
+.navbar .nav-link:hover {
+  color: #FFCCCB; /* Light Coral for hover/active state */
+  background-color: #2C3E50; /* Deep Blue-Grey background for hover */
+  border-radius: 5px;
+}
+.active{
+  color: #FFCCCB !important; /* Light Coral for hover/active state */
+  background-color: #2C3E50 !important; /* Deep Blue-Grey background for hover */
+  border-radius: 5px;
+}
+.bg-danger{
+    background-color: red !important;
+}
+.text-danger{
+color: red !important;
+}
+.btn-outline-danger {
+    background-color: rgb(255, 0, 0) !important;
+    border-color: rgb(255, 0, 0) !important;
+    color: white !important; /* Adjust text color if needed */
+}
+
+.btn-outline-danger:hover {
+    background-color: white !important;
+    color: rgb(255, 0, 0) !important;
+}
+
+    footer .btn {
+            transition: background-color 0.3s ease;
+        }
+    
+    
+        footer a:hover {
+            text-decoration: underline;
+        }
+    
+        footer .list-unstyled li {
+            margin-bottom: 8px; /* Add space between list items */
+        }
+    
+        footer h4 {
+            margin-bottom: 15px; /* Add space between heading and list */
+        }
+    
+        /* Media Queries for Tablet Specific Styles */
+        @media (min-width: 768px) and (max-width: 991px) {
+            footer .list-unstyled {
+                text-align: center;
+            }
+        }
+      .navbar-logo {
+    width: 150px; /* Adjust the width of the logo */
+    height: auto; /* Ensure the aspect ratio remains intact */
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center; /* Center the logo vertically */
+}
+
+.navbar-nav .nav-item .nav-link {
+    margin-left: 10px; /* Add space between the navbar items */
+}
+.navbar {
+    padding: 0.5rem 1rem; /* Adjust the padding to keep the navbar compact */
+}
+
+.navbar-logo {
+    width: 150px; /* Keep the logo size increased */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center; /* Center the logo vertically */
+    height: 100px; /* Control the height of the navbar brand area */
+}
+
+.navbar-nav .nav-item .nav-link {
+    margin-left: 10px; /* Space between navbar items */
+    line-height: 50px; /* Vertically center the text in the navbar */
+    padding: 0 10px; /* Reduce padding to keep the navbar compact */
+}
+ /* Set the input and container border to white */
+ .bord {
+        border: 1px solid white;
+    }
+
+    /* Style the input field */
+    #email {
+        background-color: red;
+        border: 1px solid white;
+        border-radius: 0px;
+        color: white;
+    }
+
+    /* Set the placeholder color to white */
+    #email::placeholder {
+        color: white;
+        opacity: 1;
+    }
+
+    /* Style the button with a white background and border */
+    .btn {
+        background-color: white;
+        border-radius: 0;
+        border: 1px solid white;
+        color: red;
+    }
+
+    /* Change button background to red, text to white, and border to white on hover */
+    .btn:hover {
+        background-color: red;
+        color: white;
+        border: 1px solid white;
+    }
+    .divvv{
+        display: none;
+    }
+    .backgroundimg{
+        display: block;
+    }
+
+    @media only screen and (max-width:1200px){
+        .bgfd{
+            display: none;
+        }
+        .divvv{
+            display: block;
+        }
+    .backgroundimg{
+        display: none;
+    }
+    }
+</style>
+<nav class="navbar navbar-expand-lg fixed-top bggggg">
+  <div class="container-fluid">
+      <a class="navbar-brand ms-3" href="home.html">
+          <img src="111-removebg-preview.png" class="img-fluid navbar-logo" alt="Logo">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse text-center" id="navbarSupportedContent">
+          <ul class="navbar-nav me-3 ms-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="home.html">Home</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="menu.html">Menu</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="orderonline.html">Order Online</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="bookatable.html">Book a Table</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="aboutus.html">About Us</a>
+              </li>
+          </ul>
+      </div>
+  </div>
+</nav>
+
+      <div class="container-fluid">
+        <div class="row rows">
+            <div class="col-12">
+                <div class="background">
+                    <h1 class="content">Italian Inspired Kitchen in <br> the Heart of San Francisco</h1>
+                </div>
+            </div>
+        </div>
+      </div>
+<br><br><br><br>
+      <div class="container">
+        <div class="row">
+            <div class="col-12">
+              <h1 class="text-center">Lorem ipsum dolor sit amet</h1>
+              <p class="para">We believe in the simple pleasures of life. Good food, fresh ingredients, and awesome vibes. Welcome to Salt'n Pepper, make yourself at home.</p>
+            </div>
+        </div>
+      </div>
+<br>
+<div class="container-fluid">
+  <br><br><br>
+  <div class="row backgroundcolor">
+      <div class="col-lg-6 col-md-12 d-flex justify-content-center align-items-center">
+          <img src="1.jpg" class="img-fluid ps-lg-5 ms-lg-5" alt="">
+      </div>
+      <div class="col-lg-6 col-md-12 pe-lg-5 pt-5 p-lg-5">
+          <br><br><br>
+          <h4>Our Fans' Favorite</h4>
+          <h1>Pasta Carbonara - The Ultimate Comfort</h1>
+          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Architecto in itaque, nesciunt a repellat iusto! Consequuntur iste libero, maiores nemo asperiores praesentium incidunt. Necessitatibus hic minus aliquam. Explicabo mollitia voluptates earum numquam quis quos distinctio deleniti itaque reprehenderit molestiae, iusto veritatis eius ducimus dolorem voluptatum labore eos eum. Voluptate, praesentium?</p>
+          <a href="menu.html"><button class="btn btn-outline-danger">View Menu</button></a>
+      </div>
+      <div class="col-lg-6 col-md-12 ps-lg-5 pt-5 p-lg-5">
+          <br><br><br><br><br><br><br><br>
+          <h4>An Offer You'll Love</h4>
+          <h1>Gather around the Table with Our Family Bundle</h1>
+          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Architecto in itaque, nesciunt a repellat iusto! Consequuntur iste libero, maiores nemo asperiores praesentium incidunt. Necessitatibus hic minus aliquam. Explicabo mollitia voluptates earum numquam quis quos distinctio deleniti itaque reprehenderit molestiae, iusto veritatis eius ducimus dolorem voluptatum labore eos eum. Voluptate, praesentium?</p>
+          <a href="menu.html"><button class="btn btn-outline-danger">View Menu</button></a>
+          <br><br><br>
+      </div>
+      <div class="col-lg-6 col-md-12 d-flex justify-content-center align-items-center">
+          <img src="2.jpg" class="img-fluid ps-lg-5 ms-lg-5" alt="">
+      </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-lg-8 offset-lg-2 pt-5 mt-5 text-center">
+      <h1>Moments</h1>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo quisquam sit consectetur inventore quos quia adipisci optio neque, temporibus quibusdam?</p>
+      <br><br>
+    </div>
+  </div>
+</div>
+
+<div class="container mt-5">
+  <div class="row">
+      <div class="col-md-5 d-flex align-items-center justify-content-center">
+          <img src="3.jpg" alt="Image 3" class="img-fluid zoom-image">
+      </div>
+      <div class="col-md-5 mt-3 offset-md-1 d-flex align-items-center justify-content-center">
+          <img src="4.jpg" alt="Image 4" class="img-fluid zoom-image">
+      </div>
+  </div>
+  <br>
+  <div class="row">
+      <div class="col-md-5 d-flex align-items-center justify-content-center">
+          <img src="5.jpg" class="img-fluid zoom-image" alt="">
+      </div>
+      <div class="col-md-5 offset-md-1 mt-3 d-flex align-items-center justify-content-center">
+          <img src="6.jpg" class="img-fluid zoom-image" alt="">
+      </div>
+  </div>
+  <br>
+  <div class="row">
+      <div class="col-md-5 d-flex align-items-center justify-content-center">
+          <img src="7.jpg" class="img-fluid zoom-image" alt="">
+      </div>
+      <div class="col-md-5 offset-md-1 d-flex mt-3 align-items-center justify-content-center">
+          <img src="8.jpg" class="img-fluid zoom-image" alt="">
+      </div>
+  </div>
+  <br><br>
+</div>
+<div class="divvv p-3">
+    <div class="d-flex flex-column align-items-center justify-content-center">
+        <!-- Reserve a Table Section -->
+        <div class="col-lg-9 col-md-8 col-12 backgroundcolors p-5 mx-auto mb-4 mb-xl-0">
+            <form>
+                <legend class="text-center">
+                    <h1 class="text-danger">Reserve a Table</h1>
+                    <p class="fs-5 paras">Select your details and we’ll try to get the best seats for you</p>
+                </legend>
+                <!-- Active Party Size Dropdown -->
+                <div class="paras">
+                    <label for="partySizeSelect" class="form-label">Party size</label>
+                    <select id="partySizeSelect" class="form-select text-dark">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                        <option>6</option>
+                    </select>
+                </div>
+                <!-- Time Selection -->
+                <div class="paras">
+                    <label for="timeSelect" class="form-label">Select Time</label>
+                    <select id="timeSelect" class="form-select text-dark">
+                        <option>8:00 AM</option>
+                        <option>8:15 AM</option>
+                        <option>8:30 AM</option>
+                        <option>8:45 AM</option>
+                        <option>9:00 AM</option>
+                        <option>9:15 AM</option>
+                        <option>9:30 AM</option>
+                        <option>9:45 AM</option>
+                        <option>10:00 AM</option>
+                        <option>10:15 AM</option>
+                        <option>10:30 AM</option>
+                        <option>10:45 AM</option>
+                        <option>11:00 AM</option>
+                        <option>11:15 AM</option>
+                        <option>11:30 AM</option>
+                        <option>11:45 AM</option>
+                        <option>12:00 PM</option>
+                        <option>12:15 PM</option>
+                        <option>12:30 PM</option>
+                        <option>12:45 PM</option>
+                        <option>1:00 PM</option>
+                        <option>1:15 PM</option>
+                        <option>1:30 PM</option>
+                        <option>1:45 PM</option>
+                        <option>2:00 PM</option>
+                        <option>2:15 PM</option>
+                        <option>2:30 PM</option>
+                        <option>2:45 PM</option>
+                        <option>3:00 PM</option>
+                        <option>3:15 PM</option>
+                        <option>3:30 PM</option>
+                        <option>3:45 PM</option>
+                        <option>4:00 PM</option>
+                        <option>4:15 PM</option>
+                        <option>4:30 PM</option>
+                        <option>4:45 PM</option>
+                        <option>5:00 PM</option>
+                        <option>5:15 PM</option>
+                        <option>5:30 PM</option>
+                        <option>5:45 PM</option>
+                        <option>6:00 PM</option>
+                        <option>6:15 PM</option>
+                        <option>6:30 PM</option>
+                        <option>6:45 PM</option>
+                        <option>7:00 PM</option>
+                        <option>7:15 PM</option>
+                        <option>7:30 PM</option>
+                        <option>7:45 PM</option>
+                        <option>8:00 PM</option>
+                        <option>8:15 PM</option>
+                        <option>8:30 PM</option>
+                        <option>8:45 PM</option>
+                        <option>9:00 PM</option>
+                        <option>9:15 PM</option>
+                        <option>9:30 PM</option>
+                        <option>9:45 PM</option>
+                        <option>10:00 PM</option>
+                    </select>
+                </div>
+                <!-- Date Input -->
+                <div class="mb-3">
+                    <label class="form-label">Enter Date</label>
+                    <input type="text" class="form-control" placeholder="Enter date">
+                </div>
+                <!-- Submit Button -->
+                <div class="text-center">
+                    <button type="submit" class="btn btn-outline-danger parasssss">Find a Table</button>
+                </div>
+            </form>
+        </div>
+
+        <!-- Order Online Section -->
+        <div class="col-lg-9 col-md-8 col-12 bg text-white w-md-75 p-5 mt-4 text-center">
+            <h1>Order Online</h1>
+            <p>It's Fast and Easy</p>
+            <p class="ps-3 pe-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto voluptates dignissimos, quae atque in est expedita aliquid repellendus ipsam accusantium quisquam nulla rerum labore, ullam minus rem quibusdam sequi totam! Rem molestias itaque nulla accusamus, tenetur dicta unde quasi aspernatur, reprehenderit quo nobis? Dolorem voluptas, voluptatem rem maxime minima ipsa!</p>
+            <a href="orderonline.html">
+                <button class="btn parasss">Order now</button>
+            </a>
+        </div>
+    </div>
+</div>
+
+
+<br>
+<div class="container-fluid backgroundimg d-flex align-items-center ">
+  <div class="row bgfd">
+    <div class="col-lg-4 offset-lg-2 backgroundcolors p-5 mb-5 mb-lg-0">
+      <form>
+        <legend class="text-center">
+            <h1 class="text-danger">Reserve a Table</h1>
+            <p class="fs-5 paras">Select your details and we’ll try get the best seats for you</p>
+        </legend>
+        <!-- Active Party Size Dropdown -->
+        <div class="paras">
+            <label for="partySizeSelect" class="form-label">Party size</label>
+            <select id="partySizeSelect" class="form-select text-dark">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+                <option>6</option>
+            </select>
+        </div>
+          <div class=" paras">
+            <label for="Time" class="form-label">Select Time</label>
+            <select id="timeSelect" class="form-select text-dark">
+                <option>8:00 AM</option>
+                <option>8:15 AM</option>
+                <option>8:30 AM</option>
+                <option>8:45 AM</option>
+                <option>9:00 AM</option>
+                <option>9:15 AM</option>
+                <option>9:30 AM</option>
+                <option>9:45 AM</option>
+                <option>10:00 AM</option>
+                <option>10:15 AM</option>
+                <option>10:30 AM</option>
+                <option>10:45 AM</option>
+                <option>11:00 AM</option>
+                <option>11:15 AM</option>
+                <option>11:30 AM</option>
+                <option>11:45 AM</option>
+                <option>12:00 PM</option>
+                <option>12:15 PM</option>
+                <option>12:30 PM</option>
+                <option>12:45 PM</option>
+                <option>1:00 PM</option>
+                <option>1:15 PM</option>
+                <option>1:30 PM</option>
+                <option>1:45 PM</option>
+                <option>2:00 PM</option>
+                <option>2:15 PM</option>
+                <option>2:30 PM</option>
+                <option>2:45 PM</option>
+                <option>3:00 PM</option>
+                <option>3:15 PM</option>
+                <option>3:30 PM</option>
+                <option>3:45 PM</option>
+                <option>4:00 PM</option>
+                <option>4:15 PM</option>
+                <option>4:30 PM</option>
+                <option>4:45 PM</option>
+                <option>5:00 PM</option>
+                <option>5:15 PM</option>
+                <option>5:30 PM</option>
+                <option>5:45 PM</option>
+                <option>6:00 PM</option>
+                <option>6:15 PM</option>
+                <option>6:30 PM</option>
+                <option>6:45 PM</option>
+                <option>7:00 PM</option>
+                <option>7:15 PM</option>
+                <option>7:30 PM</option>
+                <option>7:45 PM</option>
+                <option>8:00 PM</option>
+                <option>8:15 PM</option>
+                <option>8:30 PM</option>
+                <option>8:45 PM</option>
+                <option>9:00 PM</option>
+                <option>9:15 PM</option>
+                <option>9:30 PM</option>
+                <option>9:45 PM</option>
+                <option>10:00 PM</option>
+            </select>
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Enter Date</label>
+              <input type="text" class="form-control" placeholder="Enter date">
+        </div>
+            <div class="text-center">
+                <button type="submit" class="btn btn-outline-danger parasssss">Find a Table</button>
+            </div>
+    </form>
+    </div>
+    <div class="col-lg-4 bg text-white mb-5 mb-lg-0 p-5 mt-5 mt-lg-0 text-center">
+      <h1>Order Online</h1>
+      <p>It's Fast and Easy</p>
+      <p class="ps-3 pe-3">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Architecto voluptates dignissimos, quae atque in est expedita aliquid repellendus ipsam accusantium quisquam nulla rerum labore, ullam minus rem quibusdam sequi totam! Rem molestias itaque nulla accusamus, tenetur dicta unde quasi aspernatur, reprehenderit quo nobis? Dolorem voluptas, voluptatem rem maxime minima ipsa!</p>
+      <a href="orderonline.html"> <button class="btn parasss">Order now</button></a>
+    </div>
+  </div>
+</div>
+
+ <!-- Footer -->
+  
+ <footer class="bg-danger ">
+  <div class="container p-5">
+      <div class="row">
+          <div class="col-lg-4 col-md-12 text-white mt-lg-2 mt-5 mb-4">
+              <h2 class="text-center">Join the Club & Get $10 off Your Next Visit</h2>
+              <br>
+              <label for="email" class="form-label text-white ps-3 ps-lg-0">E-mail</label>
+              <div class="input-group bord">
+                <input type="email" id="email" class="form-control" placeholder="Enter your email here">
+                <button class="btn">Join</button>
+            </div>
+              <br><br>
+          </div>
+          <div class="col-lg-7 offset-lg-1 col-md-12 text-white">
+              <div class="row justify-content-md-center">
+                  <div class="col-lg-4 col-md-4 col-12 mb-4 text-lg-start text-center">
+                      <h4>Quick Links</h4>
+                      <ul class="list-unstyled">
+                          <li><a href="home.html" class="text-decoration-none text-white">Home</a></li>
+                          <li><a href="menu.html" class="text-decoration-none text-white">Menu</a></li>
+                          <li><a href="orderonline.html" class="text-decoration-none text-white">Order Online</a></li>
+                          <li><a href="bookatable.html" class="text-decoration-none text-white">Book a Table</a></li>
+                          <li><a href="feedback.html" class="text-decoration-none text-white">Feedback</a></li>
+                          <li><a href="aboutus.html" class="text-decoration-none text-white">About Us</a></li>
+                      </ul>
+                  </div>
+                  <div class="col-lg-4 col-md-4 col-12 mb-4 text-lg-start text-center">
+                      <h4>Contact Us</h4>
+                      <ul class="list-unstyled">
+                          <li><a href="hours&location.html" class="text-decoration-none text-white">Hours & Locations</a></li>
+                          <li><a href="aboutus.html" class="text-decoration-none text-white">Careers</a></li>
+                          <li><a href="salt'npepperclub.html" class="text-decoration-none text-white">Salt'n Pepper Club</a></li>
+                      </ul>
+                  </div>
+                  <div class="col-lg-4 col-md-4 col-12 mb-4 text-lg-start text-center">
+                      <h4>Follow Us</h4>
+                      <ul class="list-unstyled">
+                          <li><a href="https://web.whatsapp.com/" class="text-decoration-none text-white" target="_blank" rel="noopener noreferrer">WhatsApp</a></li>
+                          <li><a href="https://www.instagram.com/" class="text-decoration-none text-white" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+                          <li><a href="https://www.youtube.com/" class="text-decoration-none text-white" target="_blank" rel="noopener noreferrer">YouTube</a></li>
+                          <li><a href="https://twitter.com/" class="text-decoration-none text-white" target="_blank" rel="noopener noreferrer">Twitter</a></li>
+                      </ul>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>

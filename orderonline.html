@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css"> <!-- Flatpickr CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />    <link rel="stylesheet" href="style.css">
+</head>
+<body style="background-color: #FFFDD0;">
+  <style>
+.navbar {
+  background-color: rgba(255, 0, 0, 0.8); /* Semi-transparent red */
+  border-bottom: 2px solid #2C3E50; /* Deep Blue-Grey border for contrast */
+}
+.bg-danger{
+    background-color: red !important;
+}
+.text-danger{
+color: red !important;
+}
+.btn-outline-danger {
+    background-color: rgb(255, 0, 0) !important;
+    border-color: rgb(255, 0, 0) !important;
+    color: white !important; /* Adjust text color if needed */
+}
+
+.btn-outline-danger:hover {
+    background-color: white !important;
+    color: rgb(255, 0, 0) !important;
+}
+.btn-danger {
+    background-color: white !important;
+    border-color: rgb(255, 0, 0) !important;
+    color: red !important; /* Adjust text color if needed */
+}
+
+.btn-danger:hover {
+    background-color: rgb(255, 232, 232) !important;
+    color: red !important;
+}
+
+
+.navbar .nav-link {
+  color: #F0F0F0; /* Off-white text for softer contrast */
+  margin-left: 3px !important;
+}
+
+.navbar .nav-link:hover {
+  color: #FFCCCB; /* Light Coral for hover/active state */
+  background-color: #2C3E50; /* Deep Blue-Grey background for hover */
+  border-radius: 5px;
+}
+.active{
+  color: #FFCCCB !important; /* Light Coral for hover/active state */
+  background-color: #2C3E50 !important; /* Deep Blue-Grey background for hover */
+  border-radius: 5px;
+}
+
+    .parallox{
+      width: 100%;
+      height: 400px;
+      background: linear-gradient( rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)) , url(2-1.jpg) no-repeat center center;
+      background-size: cover;
+      background-attachment: fixed;
+      object-fit: fill;
+    }
+    .color{
+        background-color: #136F63;
+        border: 0 !important;
+      }
+      .color:hover{
+        background-color: #0da38f;
+      }
+
+    .button{
+      border: 1px solid red;
+      width: fit-content;
+    }
+    .button .btn{
+      border-radius: 0;
+    }
+    .bttt:hover{
+     background-color: white;
+     color: red;
+    }
+
+    .list a{
+    text-decoration: none;
+    color: inherit;
+    padding-right: 15px;
+    }
+    .list a:hover{
+      color: red;
+    }
+    .line{
+      border-bottom: 2px solid red;
+      width: fit-content;
+    }
+    .liness{
+      border: 1px solid red;
+    }
+    .div{
+      width: 100%;
+      height: 100%;
+      border: 1px solid red;
+      padding: 20px;
+      background-color: rgb(255, 252, 247);
+    }
+    .div h4{
+      color: red;
+    }
+    .div:hover{
+     background-color: rgb(255, 224, 224);
+    }
+    .margin .col-md-6{
+      margin-bottom: 20px;
+    }
+    footer .btn {
+        transition: background-color 0.3s ease;
+    }
+    footer a:hover {
+        text-decoration: underline;
+    }
+
+    footer .list-unstyled li {
+        margin-bottom: 8px; /* Add space between list items */
+    }
+
+    footer h4 {
+        margin-bottom: 15px; /* Add space between heading and list */
+    }
+
+    /* Media Queries for Tablet Specific Styles */
+    @media (min-width: 768px) and (max-width: 991px) {
+        footer .list-unstyled {
+            text-align: center;
+        }
+    }
+    .navbar-logo {
+    width: 150px; /* Adjust the width of the logo */
+    height: auto; /* Ensure the aspect ratio remains intact */
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center; /* Center the logo vertically */
+}
+
+.navbar-nav .nav-item .nav-link {
+    margin-left: 10px; /* Add space between the navbar items */
+}
+.navbar {
+    padding: 0.5rem 1rem; /* Adjust the padding to keep the navbar compact */
+}
+
+.navbar-logo {
+    width: 150px; /* Keep the logo size increased */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center; /* Center the logo vertically */
+    height: 100px; /* Control the height of the navbar brand area */
+}
+
+.navbar-nav .nav-item .nav-link {
+    margin-left: 10px; /* Space between navbar items */
+    line-height: 50px; /* Vertically center the text in the navbar */
+    padding: 0 10px; /* Reduce padding to keep the navbar compact */
+}
+ /* Set the input and container border to white */
+ .bord {
+        border: 1px solid white;
+    }
+
+    /* Style the input field */
+    #email {
+        background-color: red;
+        border: 1px solid white;
+        border-radius: 0px;
+        color: white;
+    }
+
+    /* Set the placeholder color to white */
+    #email::placeholder {
+        color: white;
+        opacity: 1;
+    }
+
+    /* Style the button with a white background and border */
+    .btn {
+        background-color: white;
+        border-radius: 0;
+        border: 1px solid white;
+        color: red;
+    }
+
+    /* Change button background to red, text to white, and border to white on hover */
+    .btn:hover {
+        background-color: red;
+        color: white;
+        border: 1px solid white;
+    }
+    .btn {
+        min-width: 100px; /* Ensures buttons have a consistent minimum width */
+    }
+
+    /* Responsive hover effect */
+    .btn:hover {
+        background-color: red;
+        color: white;
+        border: 1px solid white;
+    }
+</style>
+<nav class="navbar navbar-expand-lg bggggg">
+  <div class="container-fluid">
+      <a class="navbar-brand ms-3" href="home.html">
+          <img src="111-removebg-preview.png" class="img-fluid navbar-logo" alt="Logo">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse text-center" id="navbarSupportedContent">
+          <ul class="navbar-nav me-3 ms-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                  <a class="nav-link" aria-current="page" href="home.html">Home</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="menu.html">Menu</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link active" href="orderonline.html">Order Online</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="bookatable.html">Book a Table</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="aboutus.html">About Us</a>
+              </li>
+          </ul>
+      </div>
+  </div>
+</nav>
+      <div class="parallox"></div>
+
+
+      <section class="container pt-md-5">
+        <div class="row">
+          <div class="col-12">
+            <h1 class="text-danger pt-4 pb-2">Online Ordering</h1>
+            <p class="pb-2">You can order online! Browse our menu items and choose what you’d like to order from us.</p>
+            <button class="btn btn-outline-danger mb-4">Accepting Orders</button> <!-- Full-width on smaller screens -->
+            <div class="container">
+              <div class="row justify-content-start">
+                <div class="d-flex flex-wrap p-0"> <!-- Flex-wrap and gap for spacing on smaller screens -->
+                  <button class="btn btn-danger p-2 ">Pickup</button> <!-- Flex-fill for equal width -->
+                  <button class="btn p-2 btn-outline-danger">Delivery</button>
+                </div>
+              </div>
+            </div>    
+<div class="container d-flex flex-column flex-md-row">
+  <div class="show">
+    <p class="pt-3">
+      <i class="fa-regular fa-clock pe-2"></i>Pickup time: up to 30 minutes
+    </p>
+  </div>
+  <div class="hidden">
+    <p class="pt-md-3 pt-0">
+      <i class="fa-solid fa-location-dot ps-0 ps-md-4 pe-2"></i> Pickup Address: San Francisco, CA, USA
+    </p>
+  </div>
+</div>
+          </div>
+        </div>
+      </section>
+      
+      <div class="container d-none d-md-block">
+        <div class="row">
+          <div class="line mb-4">
+            <ul class="list list-unstyled d-flex flex-wrap mb-2 justify-content-around"> <!-- Flex-wrap and justify-content for better alignment -->
+              <li><a href="#starters" class="text-decoration-none">Starters</a></li>
+              <li><a href="#It's Pizza Time" class="text-decoration-none">It's Pizza Time</a></li>
+              <li><a href="#Main" class="text-decoration-none">Main</a></li>
+              <li><a href="#Kids favorites" class="text-decoration-none">Kids favorites</a></li>
+              <li><a href="#Special Offers" class="text-decoration-none">Special Offers</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    
+
+<section class="container">
+  <h1>All Day, Every Day</h1>
+  <br>
+  <div class="liness"></div>
+  <br>
+  <h3>Starters</h1>
+  <br>
+  <div class="row margin">
+    <div class="col-md-6">
+    <div class="div">
+    <h4>Bruschetta of the Day</h4>
+    <p>I’m a dish description. Click “Edit Menu” to open the Restaurant Menu editor and change my text.</p>
+    <p class="text-muted">$7.00</p>
+    </div>
+    </div>
+    <div class="col-md-6">
+      <div class="div">
+      <h4>Tomato Caprese</h4>
+      <p>I’m a dish description. Click “Edit Menu” to open the Restaurant Menu editor and change my text.</p>
+      <p class="text-muted">$7.00</p>
+      </div>
+      </div>
+      <div class="col-md-6">
+        <div class="div">
+        <h4>Grilled Portobello Mushrooms</h4>
+        <p>I’m a dish description. Click “Edit Menu” to open the Restaurant Menu editor and change my text.</p>
+        <p class="text-muted">$7.00</p>
+        </div>
+        </div>
+        <div class="col-md-6">
+          <div class="div">
+          <h4>Carpaccio</h4>
+          <p>I’m a dish description. Click “Edit Menu” to open the Restaurant Menu editor and change my text.</p>
+          <p class="text-muted">$7.00</p>
+          </div>
+          </div>
+          <div class="col-md-6">
+            <div class="div">
+            <h4>Burrata Salad</h4>
+            <p>I’m a dish description. Click “Edit Menu” to open the Restaurant Menu editor and change my text.</p>
+            <p class="text-muted">$7.00</p>
+            </div>
+            </div>
+            <div class="col-md-6">
+              <div class="div">
+              <h4>Garden Salad</h4>
+              <p>I’m a dish description. Click “Edit Menu” to open the Restaurant Menu editor and change my text.</p>
+              <p class="text-muted">$7.00</p>
+              </div>
+              </div>
+              <br>
+              <h3>It’s Pizza Time</h1>
+              <br>
+              <div class="row margin">
+                <div class="col-md-6">
+                <div class="div">
+                <h4>Margherita</h4>
+                <p>I’m a dish description. Click “Edit Menu” to open the Restaurant Menu editor and change my text.</p>
+                <p class="text-muted">$7.00</p>
+                </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="div">
+                  <h4>Spicy Arrabbiata</h4>
+                  <p>I’m a dish description. Click “Edit Menu” to open the Restaurant Menu editor and change my text.</p>
+                  <p class="text-muted">$7.00</p>
+                  </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="div">
+                    <h4>Pepperoni</h4>
+                    <p>I’m a dish description. Click “Edit Menu” to open the Restaurant Menu editor and change my text.</p>
+                    <p class="text-muted">$7.00</p>
+                    </div>
+                  </div>
+                  <br>
+                  <h3>Main</h1>
+                  <br>
+                  <div class="row margin">
+                    <div class="col-md-6">
+                    <div class="div">
+                    <h4>Pasta Carbonara</h4>
+                    <p>I’m a dish description. Click “Edit Menu” to open the Restaurant Menu editor and change my text.</p>
+                    <p class="text-muted">$7.00</p>
+                    </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="div">
+                      <h4>Lasagna Bolognese</h4>
+                      <p>I’m a dish description. Click “Edit Menu” to open the Restaurant Menu editor and change my text.</p>
+                      <p class="text-muted">$7.00</p>
+                      </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="div">
+                        <h4>Spaghetti Marinara</h4>
+                        <p>I’m a dish description. Click “Edit Menu” to open the Restaurant Menu editor and change my text.</p>
+                        <p class="text-muted">$7.00</p>
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="div">
+                        <h4>Cheese Tortellini</h4>
+                        <p>I’m a dish description. Click “Edit Menu” to open the Restaurant Menu editor and change my text.</p>
+                        <p class="text-muted">$7.00</p>
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="div">
+                        <h4>Chicken Marsala</h4>
+                        <p>I’m a dish description. Click “Edit Menu” to open the Restaurant Menu editor and change my text.</p>
+                        <p class="text-muted">$7.00</p>
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="div">
+                        <h4>Fish of the Day</h4>
+                        <p>I’m a dish description. Click “Edit Menu” to open the Restaurant Menu editor and change my text.</p>
+                        <p class="text-muted">$7.00</p>
+                        </div>
+                      </div>
+                      <br>
+                      <h3>Kids Favorites</h1>
+                      <br>
+                      <div class="row margin">
+                        <div class="col-md-6">
+                        <div class="div">
+                        <h4>Spaghetti Pomodoro</h4>
+                        <p>I’m a dish description. Click “Edit Menu” to open the Restaurant Menu editor and change my text.</p>
+                        <p class="text-muted">$7.00</p>
+                        </div>
+                        </div>
+                        <div class="col-md-6">
+                          <div class="div">
+                          <h4>Mac & Cheese</h4>
+                          <p>I’m a dish description. Click “Edit Menu” to open the Restaurant Menu editor and change my text.</p>
+                          <p class="text-muted">$7.00</p>
+                          </div>
+                          </div>
+                          <div class="col-md-6">
+                            <div class="div">
+                            <h4>Cheese Ravioli</h4>
+                            <p>I’m a dish description. Click “Edit Menu” to open the Restaurant Menu editor and change my text.</p>
+                            <p class="text-muted">$7.00</p>
+                            </div>
+                          </div>
+                          <div class="col-md-6">
+                            <div class="div">
+                            <h4>Salt'n Pepper Meatballs</h4>
+                            <p>I’m a dish description. Click “Edit Menu” to open the Restaurant Menu editor and change my text.</p>
+                            <p class="text-muted">$7.00</p>
+                            </div>
+                          </div>
+                          <div class="col-md-6">
+                            <div class="div">
+                            <h4>Chicken Strips</h4>
+                            <p>I’m a dish description. Click “Edit Menu” to open the Restaurant Menu editor and change my text.</p>
+                            <p class="text-muted">$7.00</p>
+                            </div>
+                          </div>
+                          <div class="col-md-6">
+                            <div class="div">
+                            <h4>Crispy Mozzarella</h4>
+                            <p>I’m a dish description. Click “Edit Menu” to open the Restaurant Menu editor and change my text.</p>
+                            <p class="text-muted">$7.00</p>
+                            </div>
+                          </div>
+                          <br>
+              <h3>Special Offers</h1>
+              <br>
+              <div class="row margin">
+                <div class="col-md-6">
+                <div class="div">
+                <h4>Daily Meal Deal</h4>
+                <p>I’m a dish description. Click “Edit Menu” to open the Restaurant Menu editor and change my text.</p>
+                <p class="text-muted">$7.00</p>
+                </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="div">
+                  <h4>Family Bundle</h4>
+                  <p>I’m a dish description. Click “Edit Menu” to open the Restaurant Menu editor and change my text.</p>
+                  <p class="text-muted">$7.00</p>
+                  </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="div">
+                    <h4>Chef's Selection - Per Person</h4>
+                    <p>I’m a dish description. Click “Edit Menu” to open the Restaurant Menu editor and change my text.</p>
+                    <p class="text-muted">$7.00</p>
+                    </div>
+                  </div>
+                        
+          
+    
+  </div>
+</section>
+
+
+
+
+
+
+
+
+    <!-- Footer -->
+  <footer class="bg-danger">
+    <div class="container p-5">
+        <div class="row">
+            <div class="col-lg-4 col-md-12 text-white mb-4">
+                <h2 class="text-center">Join the Club & Get $10 off Your Next Visit</h2>
+                <br>
+                <label for="email" class="form-label text-white">E-mail</label>
+                <div class="input-group bord">
+                  <input type="email" id="email" class="form-control" placeholder="Enter your email here">
+                  <button class="btn">Join</button>
+              </div>
+                <br><br>
+            </div>
+            <div class="col-lg-7 offset-lg-1 col-md-12 text-white">
+                <div class="row justify-content-md-center">
+                    <div class="col-lg-4 col-md-4 col-12 mb-4 text-lg-start text-center">
+                        <h4>Quick Links</h4>
+                        <ul class="list-unstyled">
+                            <li><a href="home.html" class="text-decoration-none text-white">Home</a></li>
+                            <li><a href="menu.html" class="text-decoration-none text-white">Menu</a></li>
+                            <li><a href="orderonline.html" class="text-decoration-none text-white">Order Online</a></li>
+                            <li><a href="bookatable.html" class="text-decoration-none text-white">Book a Table</a></li>
+                            <li><a href="feedback.html" class="text-decoration-none text-white">Feedback</a></li>
+                            <li><a href="aboutus.html" class="text-decoration-none text-white">About Us</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-12 mb-4 text-lg-start text-center">
+                        <h4>Contact Us</h4>
+                        <ul class="list-unstyled">
+                            <li><a href="hours&location.html" class="text-decoration-none text-white">Hours & Locations</a></li>
+                            <li><a href="aboutus.html" class="text-decoration-none text-white">Careers</a></li>
+                            <li><a href="salt'npepperclub.html" class="text-decoration-none text-white">Salt'n Pepper Club</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-12 mb-4 text-lg-start text-center">
+                        <h4>Follow Us</h4>
+                        <ul class="list-unstyled">
+                            <li><a href="https://web.whatsapp.com/" class="text-decoration-none text-white" target="_blank" rel="noopener noreferrer">WhatsApp</a></li>
+                            <li><a href="https://www.instagram.com/" class="text-decoration-none text-white" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+                            <li><a href="https://www.youtube.com/" class="text-decoration-none text-white" target="_blank" rel="noopener noreferrer">YouTube</a></li>
+                            <li><a href="https://twitter.com/" class="text-decoration-none text-white" target="_blank" rel="noopener noreferrer">Twitter</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>

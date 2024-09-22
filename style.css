@@ -1,0 +1,191 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.background{
+    width: 100%;
+    height: 100vh;
+    background: url(homeimg.png) no-repeat center center;
+    position: relative;
+    background-attachment: fixed;
+    background-size: cover;
+}
+.rows .col-12{
+    padding: 0 !important;
+}
+nav{
+    padding: 0 !important;
+}
+.containers{
+    padding: 0 !important;
+}
+.content {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 50px; 
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.4);
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+.para{
+    font-size: 25px;
+    font: bolder;
+    text-align: center;
+}
+.backgroundcolor{
+    background-color: #FFFDD0;
+}
+.backgroundimg {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
+    url('lastimg.jpg') no-repeat center center;
+    background-size: cover;
+    background-attachment: fixed;
+    display: block;
+}
+@media only screen and (max-width:1200px){
+.backgroundimg{
+    display: none !important;
+}
+}
+
+legend h1 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.mb-3 {
+    margin-bottom: 20px;
+}
+
+.form-label {
+    font-size: 16px;
+    margin-bottom: 8px;
+    display: block;
+}
+
+.form-select, .form-control {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #666;
+    border-radius: 5px;
+    color: #fff;
+    transition: border-color 0.3s ease;
+}
+
+.form-select:focus, .form-control:focus {
+    border-color: red;
+    outline: none;
+    box-shadow: 0 0 8px rgba(255, 102, 0, 0.3);
+}
+
+.input-group-text {
+    background-color: #555;
+    border: 1px solid #666;
+    color: #fff;
+}
+
+.input-group-text:hover {
+    cursor: pointer;
+    background-color: #666;
+}
+
+.form-check-label {
+    margin-left: 8px;
+}
+
+.paras{
+    margin: 0 !important ;
+}
+.parass{
+    width: 100%;
+}
+.parasssss{
+    width: 50%;
+}
+
+.parasss{
+    width: 50%;
+    background-color: white;
+    border: 1px solid red; 
+    color: red;
+}
+.parasss:hover{
+background-color: red;
+color: white;
+border: 1px solid rgb(255, 255, 255); 
+}
+.text-center {
+    text-align: center;
+}
+.backgroundcolors{
+    background-color: #ffdbdb ;
+}
+.zoom-image {
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+.zoom-image:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6); /* Add shadow */
+    border: 2px solid red; /* Add border with danger color */
+}
+.upwidth {
+    border: 1px solid white;
+    border-radius: 0;
+}
+
+.input-group {
+    max-width: 600px; /* Optional: Set a maximum width for the input group */
+    margin: 0 auto; /* Center the input group */
+}
+
+.form-label {
+    color: #333; /* Optional: Change label color */
+    font-weight: bold;
+}
+
+.form-controls {
+    border: 1px solid white;
+    border-radius: 0;
+    height: 34px;
+    background-color: #f8d7da; /* Light red background for input field */
+    transition: all 0.3s ease; /* Smooth transition */
+}
+
+.form-control:focus {
+    box-shadow: none;
+    border-color: red;
+    outline: none;
+    background-color: #ffe6e9; /* Slightly lighter background on focus */
+}
+
+.btn.width {
+    width: 25%;
+    color: red;
+    background-color: white;
+    border-radius: 0;
+    height: 34px;
+    border: 1px solid white;
+    transition: all 0.3s ease; /* Smooth transition */
+}
+
+.btn.width:hover {
+    background-color: red;
+    color: white;
+}
+.bg{
+    background-color: #ff0000;
+    
+}
+

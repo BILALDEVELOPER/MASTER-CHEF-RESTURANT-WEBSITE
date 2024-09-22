@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css"> <!-- Flatpickr CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />    <link rel="stylesheet" href="style.css">
+</head>
+<body style="background-color: #FFFDD0;">
+<style>
+    .navbar {
+  background-color: rgb(255, 38, 0); /* Semi-transparent red */
+  border-bottom: 2px solid #2C3E50; /* Deep Blue-Grey border for contrast */
+}
+
+
+.navbar .nav-link {
+  color: #F0F0F0; /* Off-white text for softer contrast */
+  margin-left: 3px !important;
+}
+
+.navbar .nav-link:hover {
+  color: #FFCCCB; /* Light Coral for hover/active state */
+  background-color: #2C3E50; /* Deep Blue-Grey background for hover */
+  border-radius: 5px;
+}
+.active{
+  color: #FFCCCB !important; /* Light Coral for hover/active state */
+  background-color: #2C3E50 !important; /* Deep Blue-Grey background for hover */
+  border-radius: 5px;
+}
+.bg-danger{
+    background-color: red !important;
+}
+.text-danger{
+color: red !important;
+}
+.btn-outline-danger {
+    background-color: rgb(255, 0, 0) !important;
+    border-color: rgb(255, 0, 0) !important;
+    color: white !important; /* Adjust text color if needed */
+}
+
+.btn-outline-danger:hover {
+    background-color: white !important;
+    color: rgb(255, 0, 0) !important;
+}
+.btn-danger{
+  border-radius: 0;
+  background-color: red;
+}
+.btn-danger:hover{
+  background-color: rgb(216, 58, 58) !important;
+}
+
+    footer .btn {
+        transition: background-color 0.3s ease;
+    }
+
+    footer a:hover {
+        text-decoration: underline;
+    }
+
+    footer .list-unstyled li {
+        margin-bottom: 8px; /* Add space between list items */
+    }
+
+    footer h4 {
+        margin-bottom: 15px; /* Add space between heading and list */
+    }
+    .color{
+        background-color: #136F63;
+        border: 0 !important;
+      }
+      .color:hover{
+        background-color: #0da38f;
+      }
+      .paralox{
+        background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)) , url(3-2.jpg) ;
+
+        width: 100%;
+        height: 700px;
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: flex;
+        align-items: center;
+      }
+  .custom-input {
+    border: 1px solid red;
+    transition: border-width 0.3s ease;
+    border-radius: 0;
+  }
+  .custom-input:focus {
+    border-width: 2px;
+    background-color: white !important;
+  }
+  .input-group-text {
+    border: 1px solid red;
+    border-radius: 0;
+  }
+  .input-group-text i {
+    color: white;
+  }
+  .marss{
+    max-width: 600px;
+    margin: 0 auto;
+  }
+    /* Media Queries for Tablet Specific Styles */
+    @media (min-width: 768px) and (max-width: 991px) {
+        footer .list-unstyled {
+            text-align: center;
+        }
+      }
+      .colors{
+        background-color: #FFFDD0;
+      }  .navbar-logo {
+width: 150px; /* Adjust the width of the logo */
+height: auto; /* Ensure the aspect ratio remains intact */
+}
+
+.navbar-brand {
+display: flex;
+align-items: center; /* Center the logo vertically */
+}
+
+.navbar-nav .nav-item .nav-link {
+margin-left: 10px; /* Add space between the navbar items */
+}
+.navbar {
+padding: 0.5rem 1rem; /* Adjust the padding to keep the navbar compact */
+}
+
+.navbar-logo {
+width: 150px; /* Keep the logo size increased */
+height: auto; /* Maintain aspect ratio */
+}
+
+.navbar-brand {
+display: flex;
+align-items: center; /* Center the logo vertically */
+height: 100px; /* Control the height of the navbar brand area */
+}
+
+.navbar-nav .nav-item .nav-link {
+margin-left: 10px; /* Space between navbar items */
+line-height: 50px; /* Vertically center the text in the navbar */
+padding: 0 10px; /* Reduce padding to keep the navbar compact */
+}
+.colors{
+        background-color: #FFFDD0;
+      }
+
+ /* Set the input and container border to white */
+ .bord {
+        border: 1px solid white;
+    }
+
+    /* Style the input field */
+    .div #email {
+        background-color: red;
+        border: 1px solid white;
+        border-radius: 0px;
+        color: white;
+    }
+
+    /* Set the placeholder color to white */
+    .div #email::placeholder {
+        color: white;
+        opacity: 1;
+    }
+
+    /* Style the button with a white background and border */
+    .div .btn {
+        background-color: white;
+        border-radius: 0;
+        border: 1px solid white;
+        color: red;
+    }
+
+    /* Change button background to red, text to white, and border to white on hover */
+    .div .btn:hover {
+        background-color: red;
+        color: white;
+        border: 1px solid white;
+    }
+    /* General styles */
+.paralox {
+  padding: 2rem;
+}
+
+.paralox .container {
+  max-width: 100%;
+}
+
+.paralox h4, .paralox h1 {
+  margin-bottom: 1rem;
+}
+
+.paralox h5 {
+  margin-bottom: 0.5rem;
+}
+
+/* Responsive styles */
+@media (max-width: 992px) {
+  .paralox .container {
+    padding: 1rem;
+  }
+  
+  .paralox .row {
+    text-align: center;
+  }
+
+  .paralox .col-lg-4 {
+    padding: 1rem 0;
+  }
+  .paralox{
+    display: none;
+  }
+}
+
+@media (max-width: 576px) {
+  .paralox .col-lg-4 {
+    padding: 0.5rem;
+  }
+  
+  .paralox h1 {
+    font-size: 1.5rem;
+  }
+
+  .paralox h2 {
+    font-size: 1.25rem;
+  }
+}
+
+</style>
+  <nav class="navbar navbar-expand-lg bggggg">
+  <div class="container-fluid">
+      <a class="navbar-brand ms-3" href="home.html">
+          <img src="111-removebg-preview.png" class="img-fluid navbar-logo" alt="Logo">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse text-center" id="navbarSupportedContent">
+          <ul class="navbar-nav me-3 ms-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                  <a class="nav-link" aria-current="page" href="home.html">Home</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="menu.html">Menu</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="orderonline.html">Order Online</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="bookatable.html">Book a Table</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link active" href="aboutus.html">About Us</a>
+              </li>
+          </ul>
+      </div>
+  </div>
+</nav>
+  <div class="container-fluid colors pe-0">
+    <div class="container colors">
+      <div class="row align-items-center pb-lg-5 pb-0 mb-lg-5 mb-0">
+        <h2 class="text-center text-danger pt-5  mt-3 pb-5 w-100">Our Story</h2>
+        <div class="col-lg-6 d-flex flex-column justify-content-center">
+          <h1>More than Great Food</h1>
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tur unde eaque fugit, natus nesciunt illo dolorem doloribus! Consequuntur neque libero velit quas quo commodi fuga veritatis consequatur atque labore ipsam, cumque nihil esse dolore perspiciatis eius recusandae rerum necessitatibus temporibus debitis quod! Obcaecati amet veritatis, voluptatum pariatur consequuntur voluptate?</p>
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Culpa a earum itaque vel illo autem iusto odit quidem animi quisquam illum laboriosam excepturi totam, repellendus doloremque corrupti dicta quis ea voluptatem, sed architecto. Aut facere dolore fuga, ut molestias omnis eius et deleniti tempora ipsa nulla esse, quisquam labore rerum.</p>
+        </div>
+        <div class="col-lg-6 d-flex align-items-center justify-content-center">
+          <img src="3-1.jpg" class="img-fluid" style="max-height: 100%; width: auto;" alt="">
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+
+
+<div class="paralox">
+  <div class="container text-white d-md-flex align-items-center justify-content-center">
+    <div class="row">
+      <h4 class="text-center text-danger">Heritage</h5>
+      <h1 class="text-center">Serving Greatness Since 2000</h1> 
+    <br><br> 
+      <div class="col-lg-4 p-5">
+        <h5>01</h1>
+        <br>
+        <h2 class="text-center pb-2">Founded on Family Values</h1>
+        <p class="text-center">Lorem ipsum dolor , quasi architecto natus doloremque quam nam? Facilis, nostrum! Eveniet molestias aperiam itaque repellat voluptatem dolorum voluptate dignissimos ea magni animi! Consequatur beatae blanditiis dignissimos possimus inventore .</p>
+      </div>
+      <div class="col-lg-4 pt-5 ps-5 pe-5">
+        <h5>02</h1>
+        <br>
+        <h2 class="text-center pb-2">A Little Taste of Tuscany</h1>
+        <p class="text-center">Lorem ipsum dolor , quasi architecto natus doloremque quam nam? Facilis, nostrum! Eveniet molestias aperiam itaque repellat voluptatem dolorum voluptate dignissimos ea magni animi! Consequatur beatae blanditiis dignissimos possimus inventore .</p>
+      </div>
+      <div class="col-lg-4 p-5">
+        <h5>03</h1>
+        <br>
+        <h2 class="text-center pb-2">Authentic Recipes Reimagined</h1>
+        <p class="text-center">Lorem ipsum dolor , quasi architecto natus doloremque quam nam? Facilis, nostrum! Eveniet molestias aperiam itaque repellat voluptatem dolorum voluptate dignissimos ea magni animi! Consequatur beatae blanditiis dignissimos possimus inventore .</p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container-fluid colors">
+  <div class="row d-flex justify-content-center">
+    <h4 class="text-danger text-center mt-5 pt-5">Join the Team</h4>
+    <h1 class="text-center mb-5">We Are Hiring</h1>
+    <div class="col-md-6 text-danger">
+      <div class="row">
+        <div class="col-md-6 d-flex flex-column mb-3">
+          <label for="firstname">First Name</label>
+          <input type="text" id="firstname" class="form-control custom-input">
+        </div>
+        <div class="col-md-6 d-flex flex-column mb-3">
+          <label for="lastname">Last Name</label>
+          <input type="text" id="lastname" class="form-control custom-input">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6 d-flex flex-column mb-3">
+          <label for="email">Email</label>
+          <input type="email" id="email" class="form-control custom-input">
+        </div>
+        <div class="col-md-6 d-flex flex-column mb-3">
+          <label for="phone">Phone</label>
+          <input type="tel" id="phone" class="form-control custom-input">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6 d-flex flex-column mb-3">
+          <label for="position">Position you apply for</label>
+          <select name="position" id="position" class="form-control custom-input">
+            <option value="" selected disabled hidden></option>
+            <option value="1">Executive Chef</option>
+            <option value="2">Food & Beverage Manager</option>
+            <option value="3">Kitchen Manager</option>
+            <option value="4">Restaurant Manager</option>
+            <option value="5">Waiter</option>
+          </select>
+        </div>
+        <div class="col-md-6 d-flex flex-column mb-3">
+          <label for="date">Available start date</label>
+          <input type="date" class="form-control custom-input" id="date">
+        </div>
+      </div>
+      <div class="d-flex flex-column mb-3 marss">
+        <label for="resume">Link your resume</label>
+        <div class="input-group">
+          <span class="input-group-text bg-danger text-white"><i class="fa-solid fa-link"></i></span>
+          <input type="url" id="resume" class="form-control custom-input" placeholder="https://your-resume-link.com">
+        </div>
+      </div> 
+      <div class="text-center">
+        <br>
+        <button class="btn btn-danger">APPLY NOW</button> 
+      </div>
+      <br><br>
+    </div>
+  </div>
+</div>
+
+ <!-- Footer -->
+ <footer class="bg-danger">
+    <div class="container p-5">
+        <div class="row">
+            <div class="col-lg-4 col-md-12 text-white mb-4">
+                <h2 class="text-center">Join the Club & Get $10 off Your Next Visit</h2>
+                <br>
+                <div class="div">
+                  <label for="email" class="form-label text-white">E-mail</label>
+                  <div class="input-group bord">
+                    <input type="email" id="email" class="form-control" placeholder="Enter your email here">
+                    <button class="btn">Join</button>
+                </div>
+                </div>
+                <br><br>
+            </div>
+            <div class="col-lg-7 offset-lg-1 col-md-12 text-white">
+                <div class="row justify-content-md-center">
+                    <div class="col-lg-4 col-md-4 col-12 mb-4 text-lg-start text-center">
+                        <h4>Quick Links</h4>
+                        <ul class="list-unstyled">
+                            <li><a href="home.html" class="text-decoration-none text-white">Home</a></li>
+                            <li><a href="menu.html" class="text-decoration-none text-white">Menu</a></li>
+                            <li><a href="orderonline.html" class="text-decoration-none text-white">Order Online</a></li>
+                            <li><a href="bookatable.html" class="text-decoration-none text-white">Book a Table</a></li>
+                            <li><a href="feedback.html" class="text-decoration-none text-white">Feedback</a></li>
+                            <li><a href="aboutus.html" class="text-decoration-none text-white">About Us</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-12 mb-4 text-lg-start text-center">
+                        <h4>Contact Us</h4>
+                        <ul class="list-unstyled">
+                            <li><a href="hours&location.html" class="text-decoration-none text-white">Hours & Locations</a></li>
+                            <li><a href="aboutus.html" class="text-decoration-none text-white">Careers</a></li>
+                            <li><a href="salt'npepperclub.html" class="text-decoration-none text-white">Salt'n Pepper Club</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-12 mb-4 text-lg-start text-center">
+                        <h4>Follow Us</h4>
+                        <ul class="list-unstyled">
+                            <li><a href="https://web.whatsapp.com/" class="text-decoration-none text-white" target="_blank" rel="noopener noreferrer">WhatsApp</a></li>
+                            <li><a href="https://www.instagram.com/" class="text-decoration-none text-white" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+                            <li><a href="https://www.youtube.com/" class="text-decoration-none text-white" target="_blank" rel="noopener noreferrer">YouTube</a></li>
+                            <li><a href="https://twitter.com/" class="text-decoration-none text-white" target="_blank" rel="noopener noreferrer">Twitter</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
